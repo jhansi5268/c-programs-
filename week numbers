@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int weekNumber;
+    printf("Enter the week number (1-7): ");
+    scanf("%d", &weekNumber);
+
+    // Determine the day based on the week number
+    char* day;
+    switch (weekNumber) {
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+            break;
+        case 7:
+            day = "Sunday";
+            break;
+        default:
+            printf("Invalid week number entered!\n");
+            return 0;
+    }
+
+    // Print the day of the week
+    printf("The day corresponding to week number %d is %s.\n", weekNumber, day);
+
+    return 0;
+}
