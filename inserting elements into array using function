@@ -1,0 +1,27 @@
+#include <stdio.h>
+#define SIZE 50
+int main() {
+    void insertele(int[],int,int,int);
+    int a[SIZE],len,pos,ele,i;
+    scanf("%d",&len);
+    for(i=0;i<len;i++)
+       scanf("%d",&a[i]);
+    scanf("%d%d",&pos,&ele);
+    insertele(a,len,pos,ele);
+    return 0;
+}
+void insertele(int a[],int len,int pos,int ele)
+{
+    int i;
+    if(pos>=0 && pos<SIZE)
+    {
+        for(i=len;i>pos;i--)
+            a[i]=a[i-1];
+        a[pos]=ele;
+        len++;
+        for(i=0;i<len;i++)
+           printf("%d ",a[i]);
+    }
+    else
+      printf("out of bounds");
+}
