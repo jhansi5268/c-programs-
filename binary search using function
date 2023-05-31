@@ -1,0 +1,28 @@
+#include<stdio.h>
+void binsearch(int a[],int si,int ei,int len,int n,int mid){
+    si=0;
+	ei=len-1;
+	
+	while(si<=ei)
+	{
+		mid=(si+ei)/2;
+		if(a[mid]==n)
+		{
+			printf("\nLoc:%d!",mid);
+			break;
+		}
+		if(a[mid]>n)
+			ei=mid-1;
+		else
+			si=mid+1;
+	}
+
+}
+ int main()
+{   
+	int a[]={8,5,2,1,6,3,4,9,7};
+	int len=sizeof(a)/sizeof(int);
+	int mid,i,n,si,ei;
+	scanf("%d",&n);
+binsearch(a,si,ei,len,n,mid);
+}
